@@ -5,6 +5,7 @@ gem 'rails', '3.2.7'
 gem 'haml'
 gem 'geocoder'
 gem 'jquery-rails'
+gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
