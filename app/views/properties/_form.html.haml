@@ -1,0 +1,24 @@
+= form_for @property do |f|
+  = f.label :unit_number, 'Unit Number'
+  = f.text_field :unit_number
+
+  = f.label :street_number, 'Street Number'
+  = f.text_field :street_number
+
+  = f.label :street_name, 'Street Name'
+  = f.text_field :street_name
+
+  = f.label :suburb, 'Suburb'
+  = f.text_field :suburb
+
+  = f.label :state, 'State'
+  = f.text_field :state
+
+  = f.label :postcode, 'Postcode'
+  = f.text_field :postcode
+
+  .form-actions
+    = f.submit @property.new_record? ? "Create" : "Save", disable_with: "Saving…", class: "btn btn-primary"
+    = link_to "Cancel", properties_path, class: "btn pull-right"
+    - unless @property.new_record?
+      = link_to "Delete", property_path(@property.id),  method: :delete, confirm: "Delete property?", class: "btn btn-danger pull-right"

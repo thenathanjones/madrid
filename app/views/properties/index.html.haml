@@ -1,0 +1,12 @@
+.row-fluid
+  %table.table.table-striped
+    %tbody
+      - @properties.each do |p|
+        %tr.property
+          %td
+            = p.street_name
+          %td
+            = link_to 'Show', property_path(p.id), class: 'btn'
+
+  .form-actions
+    = link_to 'New Property', new_property_path, class: 'btn btn-primary'
