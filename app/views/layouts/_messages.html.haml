@@ -1,0 +1,7 @@
+#flash-messages
+  - if flash[:notice]
+    #notice-messages.alert.alert-success= flash[:notice]
+  - if flash[:error]
+    #error-messages.alert.alert-error= flash[:error]
+  - if flash[:warning]
+    #warning-messages.alert= flash[:warning]
